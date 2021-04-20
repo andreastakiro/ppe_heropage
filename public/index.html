@@ -5,14 +5,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="/build/tailwind.css" rel="stylesheet">
-  <title>Woo</title>
+  <title>SPEICHER</title>
 </head>
 <body>
 <!-- This example requires Tailwind CSS v2.0+ -->
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
 </body>
-
+<template>
+  <div class="fixed bottom-0 inset-x-0 pb-2 sm:pb-5">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="p-2 rounded-lg bg-indigo-600 shadow-lg sm:p-3">
+        <div class="flex items-center justify-between flex-wrap">
+          <div class="w-0 flex-1 flex items-center">
+            <span class="flex p-2 rounded-lg bg-indigo-800">
+              <SpeakerphoneIcon class="h-6 w-6 text-white" aria-hidden="true" />
+            </span>
+            <p class="ml-3 font-medium text-white truncate">
+              <span class="md:hidden">
+                We announced a new product!
+              </span>
+              <span class="hidden md:inline">
+                Big news! We're excited to announce a brand new product.
+              </span>
+            </p>
+          </div>
+          <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+            <a href="#" class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-indigo-50">
+              Learn more
+            </a>
+          </div>
+          <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-2">
+            <button type="button" class="-mr-1 flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white">
+              <span class="sr-only">Dismiss</span>
+              <XIcon class="h-6 w-6 text-white" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  import { SpeakerphoneIcon, XIcon } from '@heroicons/vue/outline'
+  
+  export default {
+    components: {
+      SpeakerphoneIcon,
+      XIcon,
+    },
+  }
+  </script>
     <main>
+      
       <div>
         <!-- Hero card -->
         <div class="relative">
@@ -33,10 +77,10 @@
                 </p>
                 <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                   <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                    <a href="#" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8">
+                    <a href="https://ppe.speicher.ltd/" target="_blank" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8">
                      Kom igang nu
                     </a>
-                    <a href="#" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8">
+                    <a href="mailto:contact@speicher.ltd" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8">
                       Få en web demo
                     </a>
                   </div>
@@ -86,7 +130,7 @@
         </div>
         <div class="mt-10 flex text-base max-w-prose mx-auto lg:max-w-none">
           <div class="rounded-md shadow">
-            <a href="#" class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+            <a href="mailto:contact@speicher.ltd" class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
               Kontakt os her
             </a>
           </div>
@@ -104,7 +148,7 @@
         </svg>
         <blockquote class="relative bg-white rounded-lg shadow-lg">
           <div class="rounded-t-lg px-6 py-8 sm:px-10 sm:pt-10 sm:pb-8">
-            <img src="https://tailwindui.com/img/logos/workcation-logo-indigo-600-mark-gray-800-and-indigo-600-text.svg" alt="Workcation" class="h-8">
+            <img src="/img/speicher_logo.svg" alt="SPEICHER" class="h-8">
             <div class="relative text-lg text-gray-700 font-medium mt-8">
               <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
                 <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
@@ -114,11 +158,11 @@
           </div>
           <cite class="relative flex items-center sm:items-start bg-indigo-600 rounded-b-lg not-italic py-5 px-6 sm:py-5 sm:pl-12 sm:pr-10 sm:mt-10">
             <div class="relative rounded-full border-2 border-white sm:absolute sm:top-0 sm:transform sm:-translate-y-1/2">
-              <img class="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-indigo-300" src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2.5&w=160&h=160&q=80" alt="">
+              <img class="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-indigo-300" src="/img/ajs.png" alt="Ajs">
             </div>
             <span class="relative ml-4 text-indigo-300 font-semibold leading-6 sm:ml-24 sm:pl-1">
               <p class="text-white font-semibold sm:inline">Andreas H. Diechmann</p>
-              <p class="sm:inline">CEO</p>
+              <p class="sm:inline"> CEO</p>
             </span>
           </cite>
         </blockquote>
@@ -133,7 +177,7 @@
           <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
           <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
             <div class="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
-              <img class="object-cover lg:h-full lg:w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="">
+              <img class="object-cover lg:h-full lg:w-full" src="/img/warehouse_pat.png" alt="male-warehouse">
             </div>
           </div>
         </div>
@@ -308,7 +352,7 @@
         Vi er her for at hjælpe 
       </p>
       <p class="mt-3 text-lg text-gray-300">
-        Det er aldrig rart at stå alene. Derfor står vi altid parat til at besvare selv de mindste spørgsmål. Dog er vores erfaring, at brugere af SPEICHER værnemiddelsystem er selvkørende. . 
+        Det er aldrig rart at stå alene. Derfor står vi altid parat til at besvare selv de mindste spørgsmål. Dog er vores erfaring, at brugere af SPEICHER værnemiddelsystem hurtigt bliver selvkørende.
       </p>
       <div class="mt-8">
         <div class="inline-flex rounded-md shadow">
@@ -748,4 +792,5 @@
   </footer>
       
 </body>
+
 </html>
